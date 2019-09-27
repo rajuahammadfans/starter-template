@@ -1,14 +1,10 @@
 doctype html
 html
     head
-        title Starter Template
-        link(rel='stylesheet' href='assets/css/style.css')
+        include inc/meta-tags
+        title   Starter Template
+        include inc/styles
     body
-        header
-            include inc/navbar
-        section
-            h2 Lorem ipsum dolor sit amet.
-            h1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, optio?
-            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, minus.
-            h5 Lorem, ipsum.
-        footer
+        include inc/header
+        include inc/footer
+        include inc/scripts
