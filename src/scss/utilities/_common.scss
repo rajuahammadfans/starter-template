@@ -1,0 +1,372 @@
+/*============================
+03. Common Style CSS
+==============================*/
+
+/*------------------
+3.1 - Buttons Style
+--------------------*/
+.btn-group {
+  .btn {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.btn{
+
+}
+
+/*----------------------
+3.2 - Background Image
+-----------------------*/
+.bg-img {
+  background: no-repeat center center;
+  background-size: cover;
+
+  &-tr {
+    background: no-repeat top right;
+  }
+
+  &-tl {
+    background: no-repeat top left;
+  }
+
+  &-br {
+    background: no-repeat bottom right;
+  }
+
+  &-bl {
+    background: no-repeat bottom left;
+  }
+
+  &-nr {
+    background: no-repeat center center;
+    background-size: contain;
+  }
+}
+
+/*-----------------
+3.3 - Overflow
+-------------------*/
+.fix {
+  overflow: hidden;
+
+  &-x {
+    overflow-x: hidden;
+  }
+
+  &-y {
+    overflow-y: hidden;
+  }
+}
+
+/*-------------------------
+3.4 - Section title Style
+--------------------------*/
+.section-title {
+
+}
+
+/*-------------------------
+3.5 - List Style
+--------------------------*/
+.tm-list {
+  li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: '\f00c';
+      font-family: $fa-icon;
+      color: $secondaryColor;
+      position: absolute;
+      font-weight: 300;
+      font-size: 14px;
+      top: 2px;
+      left: 0;
+    }
+  }
+
+  &-brand {
+    li {
+      &:before {
+        color: $brandColor;
+      }
+    }
+  }
+
+  &-number{
+    margin-left: 15px;
+    li{
+      list-style: decimal;
+      padding-left: 10px;
+
+      &:before{
+        display: none;
+      }
+    }
+  }
+}
+
+/*--------------------------------
+3.6 - Site Content Wrapper
+----------------------------------*/
+.site-wrapper {
+  background-color: $white;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/*--------------------------------
+3.7 - Tippy Customization
+----------------------------------*/
+.tippy-popper {
+  .tippy-tooltip {
+    background-color: $secondaryColor;
+    border-radius: 3px;
+    @include font-size(14px);
+    font-weight: 400;
+    line-height: 1;
+    padding: 7px 13px;
+  }
+
+  &[x-placement^='top'] {
+    .tippy-arrow {
+      border-top-color: $secondaryColor !important;
+    }
+  }
+
+  &[x-placement^='bottom'] {
+    .tippy-arrow {
+      border-bottom-color: $secondaryColor !important;
+    }
+  }
+
+  &[x-placement^='left'] {
+    .tippy-arrow {
+      border-left-color: $secondaryColor !important;
+    }
+  }
+
+  &[x-placement^='right'] {
+    .tippy-arrow {
+      border-right-color: $secondaryColor !important;
+    }
+  }
+}
+
+/*--------------------------------
+3.8 - Magnific JS Customization
+----------------------------------*/
+.ht-mfp {
+  transition: 0.4s;
+
+  &.mfp-bg {
+    background: $secondaryColor;
+    transition: 0.4s;
+  }
+
+  .mfp-content {
+    transition: 0.3s;
+
+    @media #{$xl-device} {
+      max-width: 70%;
+    }
+
+
+    .mfp-close {
+      display: none;
+    }
+  }
+
+  .mfp-close {
+    background-color: $brandColor;
+    color: $white;
+    padding: 0;
+    text-align: center;
+    opacity: 1;
+    top: 50px;
+    right: 50px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+
+    @media #{$sm-device} {
+      top: 30px;
+      right: 30px;
+      height: 40px;
+      width: 40px;
+      line-height: 40px;
+    }
+
+    &:hover {
+      background-color: $secondaryColor;
+    }
+  }
+
+  .mfp-arrow {
+    background-color: $brandColor;
+    opacity: 1;
+    margin-left: 15px;
+    height: 55px;
+    width: 55px;
+
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      content: '\f104';
+      color: $white;
+      font-family: $fa-icon;
+      @include font-size(25px);
+      line-height: 40px;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-right {
+      margin-left: auto;
+      margin-right: 15px;
+
+      &:after {
+        content: '\f105';
+      }
+    }
+
+    &:hover {
+      background-color: darken($secondaryColor, 10%);
+    }
+  }
+
+  &.zoom-animate {
+    &.mfp-bg {
+      opacity: 0;
+    }
+
+    .mfp-content {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+
+    // Animate In
+    &.mfp-ready {
+      &.mfp-bg {
+        opacity: 0.9;
+      }
+
+      .mfp-content {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    // Animate Out
+    &.mfp-removing {
+      .mfp-content {
+        transform: scale(1.2);
+        opacity: 0;
+      }
+
+      &.mfp-bg {
+        opacity: 0;
+      }
+
+      .mfp-close {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+/*--------------------------------
+3.09 - Blockquote Style
+----------------------------------*/
+blockquote, .blockquote {
+  background-color: $blackSoft;
+  color: $white;
+  @include font-size(26px);
+  line-height: 1.4;
+  padding: 42px 44px 80px;
+  position: relative;
+
+  @media #{$sm-device} {
+    padding: 20px 22px 60px;
+  }
+
+  &:before {
+    content: '\f10e';
+    font-family: $fa-icon;
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+
+    @media #{$sm-device} {
+      right: 30px;
+      bottom: 20px;
+    }
+  }
+
+  &-title {
+    color: $brandColor;
+    text-transform: uppercase;
+    @include font-size(14px);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    line-height: 1;
+  }
+}
+
+/*--------------------------------
+3.10 - Nice Select Customization
+----------------------------------*/
+.nice-select {
+  background-color: transparent;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid $brandColor;
+  color: $secondaryColor;
+  float: inherit;
+  @include font-size(24px);
+  padding-left: 0;
+
+  &:hover, &:focus {
+    border-bottom-color: $brandColor;
+  }
+
+  &:after {
+    border-right-color: $secondaryColor;
+    border-bottom-color: $secondaryColor;
+    height: 7px;
+    width: 7px;
+  }
+
+  .list {
+    border-radius: 0;
+    color: $secondaryColor;
+    @include font-size(16px);
+    width: 100%;
+  }
+}
+
+.button-item{
+  .btn-xl{
+    @media #{$sm-device} {
+      padding: 20px 40px;
+    }
+  }
+}

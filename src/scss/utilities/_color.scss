@@ -1,0 +1,41 @@
+/*==========================
+02. Color CSS
+============================*/
+// Background Colors
+.bg{
+
+  &-white{
+    background-color: $white;
+  }
+
+  &-softWhite{
+    background-color: #f8f8f8;
+  }
+
+  &-brand{
+    background-color: $brandColor;
+  }
+
+  &-secondary{
+    background-color: $secondaryColor;
+  }
+
+  &-secondary-soft{
+    background-color: lighten($secondaryColor, 10%);
+  }
+  
+  &-secondary-2{
+    background-color: #496189;
+  }
+
+  &-blackSoft{
+    background-color: $blackSoft;
+  }
+}
+
+// Text Colors
+.text{
+  &-brand{
+    color: $brandColor;
+  }
+}

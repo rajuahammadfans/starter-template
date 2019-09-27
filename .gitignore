@@ -1,0 +1,12 @@
+.idea
+.git
+node_modules
+resources
+desktop.ini
+*.zip
+*.ps
+ddebug.log
+package-lock.json
+yarn.lock
+yarn-error.log
+app

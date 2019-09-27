@@ -1,0 +1,47 @@
+//== Typography Variable
+$baseFont: 'Karla', sans-serif;
+$font-pd: 'Playfair Display', serif;
+$baseFontSize: 18px;
+$pe-icon: 'Pe-icon-7-stroke';
+$fa-icon: 'FontAwesome';
+$linea-icon: 'linea-arrows-10';
+
+//== Site Typography Colors
+$paragraph: #878c9b;
+$headingColor: #182141;
+$ashColor: #aaaaaa;
+$borderColor: #eee;
+
+//== Site Brand Color
+$brandColor: #f2b636;
+$secondaryColor: #182141;
+
+//== Alternative Color
+$white: #FFFFFF;
+$offWhite: #EEEEEE;
+$black: #000000;
+$blackSoft: #222222;
+$navy: #3b5998;
+$pink: #FF69B4;
+$violet: #9933cc;
+$olive: #559137;
+$green: #008000;
+$red: #ff0000;
+$orange: #f5740a;
+$yellow: #fbbf00;
+
+//== Social Media Icons Color
+$facebook: #3B5999;
+$twitter: #1DA1F2;
+$pinterest: #CB2028;
+$youtube: #CC332D;
+$reddit: #FF4500;
+
+//== Responsive Media Query Variables
+$xlmax-device: 'only screen and (min-width: 1200px) and (max-width: 1599.98px)';
+$xl-device: 'only screen and (min-width: 1200px)';
+$lg-device: 'only screen and (min-width: 992px) and (max-width: 1199.98px)';
+$md-device: 'only screen and (min-width: 768px) and (max-width: 991.98px)';
+$sm-device: 'only screen and (max-width: 767.98px)';
+$xs-device: 'only screen and (max-width: 575.98px)';
+$xxs-device: 'only screen and (max-width: 479.98px)';
