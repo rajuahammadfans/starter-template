@@ -4,8 +4,8 @@ node_modules
 resources
 desktop.ini
 *.zip
-*.ps
-ddebug.log
+*.psd
+debug.log
 package-lock.json
 yarn.lock
 yarn-error.log

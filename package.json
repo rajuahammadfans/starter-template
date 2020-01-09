@@ -1,6 +1,6 @@
 {
   "name": "starter-template",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "gulpfile.js",
   "license": "MIT",
   "dependencies": {
@@ -9,6 +9,7 @@
     "gulp-autoprefixer": "^7.0.0",
     "gulp-beautify": "^3.0.0",
     "gulp-clean": "^0.4.0",
+    "gulp-file-include": "^2.1.1",
     "gulp-htmlmin": "^5.0.1",
     "gulp-if": "^3.0.0",
     "gulp-imagemin": "^6.1.0",

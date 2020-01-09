@@ -17,8 +17,7 @@ let gulp = require('gulp'),
     useref = require('gulp-useref'),
     gulpif = require('gulp-if'),
     htmlmin = require('gulp-htmlmin'),
-
-    ss = 2;
+    fileinclude = require('gulp-file-include');
 
 
 let autoprefixerBrowsers = [
@@ -71,11 +70,24 @@ function reload(done) {
 }
 
 // Compile Pug to HTML
-function buildHTML(done) {
+function buildPug(done) {
     gulp.src('src/views/*.pug')
         .pipe(errorNotify('Error on Compile HTML'))
         .pipe(pug({
             pretty: true
+        }))
+        .pipe(gulp.dest('app/'));
+    done();
+}
+
+// Compile HTML
+function buildHTML(done) {
+    gulp.src('src/html/*.html')
+        .pipe(errorNotify('Error on Compile HTML'))
+        .pipe(fileinclude({
+            prefix: '##',
+            basepath: 'src/html/inc',
+            indent: true
         }))
         .pipe(gulp.dest('app/'));
     done();
@@ -139,7 +151,8 @@ function jsCopy(done) {
 
 // Watch All Changes
 function watch(done) {
-    gulp.watch('src/views/**/*', gulp.series(buildHTML, reload));
+    gulp.watch('src/views/**/*', gulp.series(buildPug, reload));
+    gulp.watch('src/html/**/*', gulp.series(buildHTML, reload));
     gulp.watch('src/scss/**/*', gulp.series(buildCSS, reload));
     gulp.watch('src/css/**/*', gulp.series(cssCopy, reload));
     gulp.watch('src/fonts/**/*', gulp.series(fontsCopy, reload));
